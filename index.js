@@ -27,5 +27,11 @@ function displayRepositories(){
 
 function getCommits(el){
   const repoName = el.dataset.repository
-  const url = rootURL + "/repos/" el.dataset.username + "/" + repoName + "/commits"
+  const url = rootURL + "/repos/" + el.dataset.username + "/" + repoName + "/commits"
+  const xhr = JSON.parse(this.responsText);
+  xhr.addEventListener("load", displayCommits)
+  xhr.open("GET", url)
+  xhr.send()
 }
+
+
