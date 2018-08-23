@@ -7,6 +7,7 @@ function getRepositories(){
   xhr.addEventListener("load", displayRepositories);
   xhr.open("GET", url);
   xhr.send();
+  return false;
 }
 function displayRepositories(){
   const repos = JSON.parse(this.responsText);
