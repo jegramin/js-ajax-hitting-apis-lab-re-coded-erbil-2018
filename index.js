@@ -47,7 +47,7 @@ function getCommits(el){
   const repoName = el.dataset.repository
   const url = rootURL + "/repos/" + el.dataset.username + "/" + repoName + "/branches"
   const xhr = new XMLHttpRequest();
-  xhr.addEventListener("load", displayCommits)
+  xhr.addEventListener("load", displayBranches)
   xhr.open("GET", url)
   xhr.send()
 }
