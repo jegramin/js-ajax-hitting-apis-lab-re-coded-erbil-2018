@@ -25,6 +25,7 @@ function displayRepositories(){
   document.getElementById(repositories).innerHTML = repoLoist;
 }
 
-function getCommits(){
-  const url = rootURL + "/commits/" + 
+function getCommits(el){
+  const repoName = el.dataset.repository
+  const url = rootURL + el.dataset.username + "/" + repoName + "/commits/"
 }
