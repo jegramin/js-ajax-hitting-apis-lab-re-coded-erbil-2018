@@ -25,4 +25,6 @@ function displayRepositories(){
   document.getElementById(repositories).innerHTML = repoLoist;
 }
 
-function 
+function getCommits(){
+  const url = rootURL + "/commits/" + 
+}
